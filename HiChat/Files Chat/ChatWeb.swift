@@ -7,77 +7,47 @@
 //
 
 import UIKit
+import WebKit
 
-class ChatViewController: UIViewController, UIWebViewDelegate {
+class ChatWeb: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webViewChat: UIWebView!
-    
+    @IBOutlet weak var webChat: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "Chat"
 
-        webViewChat.delegate = self
+        self.webChat.navigationDelegate = self
         
-        carregarWebView()
+        if let path = Bundle.main.path(forResource: "Chat", ofType: "plist")
+        {
+            if let dictRoot = NSDictionary(contentsOfFile: path)
+            {
+                let dictUrl = dictRoot.value(forKey: "Url") as! NSArray
+                
+                let urlBot = dictUrl[0] as! NSDictionary
+                
+                let urlString = urlBot.value(forKey: "BotUrl") as! String
+
+                let url = URL(string: urlString)!
+                let request = URLRequest (url: url)
+
+                self.webChat.load(request)
+            }
+        }
     }
 
-    func carregarWebView(){
-//        var dictRoot: NSDictionary?
-//        if let path = Bundle.main.path(forResource: "CHAT", ofType: "plist") {
-//            dictRoot = NSDictionary(contentsOfFile: path)
-//        }
-//
-//        if dictRoot != nil
-//        {
-//            let arrayList:[NSDictionary] = dictRoot?["links"] as! Array
-//            // Now a loop through Array to fetch single Item from catList which is Dictionary
-//            arrayList.forEach({ (dict) in
-//                let link =  (dict["BOT_URL"]!)
-//                //print("Category Id \(dict["cid"])")
-//                let UrlString = link
-//                let url = URL(string: UrlString as! String)!
-//                let request = URLRequest (url: url)
-//                webViewChat.loadRequest(request)
-//            })
-//        }
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
-        
-        
-        // outro modo
-        
-//        var nsDictionary: NSDictionary?
-//        if let path = Bundle.main.path(forResource: "Chat", ofType: "plist") {
-//            nsDictionary = NSDictionary(contentsOfFile: path)
-//            let UrlString = path
-//            let url = URL(string: UrlString)!
-//            let request = URLRequest (url: url)
-//            webViewChat.loadRequest(request)
-//        }
-//        let UrlString = path
-//        let url = URL(string: UrlString)!
-//        let request = URLRequest (url: url)
-//        webViewChat.loadRequest(request)
-    
-    let UrlString = "https://www2.directtalk.com.br/chat31/?idd=048F00860658E0195375"
-    let url = URL(string: UrlString)!
-    let request = URLRequest (url: url)
-    webViewChat.loadRequest(request)
-    }
-    
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool
-    {
-        if(requestIsDownloadable(request: request))
+        if(requestIsDownloadable(request: navigationAction.request))
         {
-            if let url = request.url{
+            if let url = navigationAction.request.url{
                 UIApplication.shared.open(url)
-                
-                return false
             }
         }
         
-        return true
+        return decisionHandler(.allow)
     }
     
     
@@ -112,6 +82,11 @@ class ChatViewController: UIViewController, UIWebViewDelegate {
         
         return isDownloadable
     }
+    
+    @IBAction func actBtnFechar(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 

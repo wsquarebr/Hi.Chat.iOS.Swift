@@ -11,10 +11,6 @@ import AVFoundation
 
 class ChatIniciarPermissoes: UIViewController {
     
-    var permitirCamera = false
-    var permitirGaleria = false
-    var permitirAudio = false
-    var permitirStorage = false
     @IBOutlet weak var btnIniciarAtendimento: UIButton!
     
     override func viewDidLoad() {
@@ -24,13 +20,9 @@ class ChatIniciarPermissoes: UIViewController {
         navigationItem.title = "Chat"
     }
 
-
     @IBAction func actIniciarAtendimento(_ sender: Any) {
-        let proximaTela = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChatViewController")
-        proximaTela.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(proximaTela, animated: true)
-        self.dismiss(animated: true)
+        let chat = UIStoryboard.init(name: "Chat", bundle: nil).instantiateViewController(withIdentifier: "ChatWebNav")
+        self.present(chat, animated: true, completion: nil)
     }
-    
 }
 

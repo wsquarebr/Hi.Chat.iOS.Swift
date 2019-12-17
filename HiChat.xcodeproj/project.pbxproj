@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F04F6B823A7DDD2009AFBDB /* chat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F6B723A7DDD2009AFBDB /* chat.plist */; };
-		0F04F6BC23A7F34B009AFBDB /* CHAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F04F6BB23A7F34B009AFBDB /* CHAT.swift */; };
+		0F04F6B823A7DDD2009AFBDB /* Chat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F04F6B723A7DDD2009AFBDB /* Chat.plist */; };
 		0FF7448C23A2B8AF0025EB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7448B23A2B8AF0025EB98 /* AppDelegate.swift */; };
 		0FF7448E23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF7448D23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift */; };
-		0FF7449123A2B8AF0025EB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7448F23A2B8AF0025EB98 /* Main.storyboard */; };
+		0FF7449123A2B8AF0025EB98 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7448F23A2B8AF0025EB98 /* Chat.storyboard */; };
 		0FF7449323A2B8B20025EB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7449223A2B8B20025EB98 /* Assets.xcassets */; };
 		0FF7449623A2B8B20025EB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF7449423A2B8B20025EB98 /* LaunchScreen.storyboard */; };
-		0FF744A223A2BFE90025EB98 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF744A123A2BFE90025EB98 /* ChatViewController.swift */; };
+		0FF744A223A2BFE90025EB98 /* ChatWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF744A123A2BFE90025EB98 /* ChatWeb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F04F6B723A7DDD2009AFBDB /* chat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chat.plist; sourceTree = "<group>"; };
-		0F04F6BB23A7F34B009AFBDB /* CHAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CHAT.swift; path = ../CHAT.swift; sourceTree = "<group>"; };
+		0F04F6B723A7DDD2009AFBDB /* Chat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chat.plist; sourceTree = "<group>"; };
 		0FF7448823A2B8AE0025EB98 /* HiChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HiChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF7448B23A2B8AF0025EB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF7448D23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatIniciarPermissoes.swift; sourceTree = "<group>"; };
-		0FF7449023A2B8AF0025EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0FF7449023A2B8AF0025EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chat.storyboard; sourceTree = "<group>"; };
 		0FF7449223A2B8B20025EB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FF7449523A2B8B20025EB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FF7449723A2B8B20025EB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FF744A123A2BFE90025EB98 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewController.swift; path = ../ChatViewController.swift; sourceTree = "<group>"; };
+		0FF744A123A2BFE90025EB98 /* ChatWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWeb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +58,32 @@
 		0FF7448A23A2B8AE0025EB98 /* HiChat */ = {
 			isa = PBXGroup;
 			children = (
-				0F04F6BB23A7F34B009AFBDB /* CHAT.swift */,
-				0FF7448B23A2B8AF0025EB98 /* AppDelegate.swift */,
-				0FF7448D23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift */,
-				0FF744A123A2BFE90025EB98 /* ChatViewController.swift */,
-				0FF7448F23A2B8AF0025EB98 /* Main.storyboard */,
-				0FF7449223A2B8B20025EB98 /* Assets.xcassets */,
-				0FF7449423A2B8B20025EB98 /* LaunchScreen.storyboard */,
+				D480FC7323A9419200259833 /* Files Chat */,
+				D480FC7423A941E900259833 /* Files Project */,
 				0FF7449723A2B8B20025EB98 /* Info.plist */,
-				0F04F6B723A7DDD2009AFBDB /* chat.plist */,
 			);
 			path = HiChat;
+			sourceTree = "<group>";
+		};
+		D480FC7323A9419200259833 /* Files Chat */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7448D23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift */,
+				0FF744A123A2BFE90025EB98 /* ChatWeb.swift */,
+				0FF7448F23A2B8AF0025EB98 /* Chat.storyboard */,
+				0F04F6B723A7DDD2009AFBDB /* Chat.plist */,
+			);
+			path = "Files Chat";
+			sourceTree = "<group>";
+		};
+		D480FC7423A941E900259833 /* Files Project */ = {
+			isa = PBXGroup;
+			children = (
+				0FF7448B23A2B8AF0025EB98 /* AppDelegate.swift */,
+				0FF7449223A2B8B20025EB98 /* Assets.xcassets */,
+				0FF7449423A2B8B20025EB98 /* LaunchScreen.storyboard */,
+			);
+			path = "Files Project";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,10 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F04F6B823A7DDD2009AFBDB /* chat.plist in Resources */,
+				0F04F6B823A7DDD2009AFBDB /* Chat.plist in Resources */,
 				0FF7449623A2B8B20025EB98 /* LaunchScreen.storyboard in Resources */,
 				0FF7449323A2B8B20025EB98 /* Assets.xcassets in Resources */,
-				0FF7449123A2B8AF0025EB98 /* Main.storyboard in Resources */,
+				0FF7449123A2B8AF0025EB98 /* Chat.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,8 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FF7448E23A2B8AF0025EB98 /* ChatIniciarPermissoes.swift in Sources */,
-				0F04F6BC23A7F34B009AFBDB /* CHAT.swift in Sources */,
-				0FF744A223A2BFE90025EB98 /* ChatViewController.swift in Sources */,
+				0FF744A223A2BFE90025EB98 /* ChatWeb.swift in Sources */,
 				0FF7448C23A2B8AF0025EB98 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,12 +167,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0FF7448F23A2B8AF0025EB98 /* Main.storyboard */ = {
+		0FF7448F23A2B8AF0025EB98 /* Chat.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0FF7449023A2B8AF0025EB98 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Chat.storyboard;
 			sourceTree = "<group>";
 		};
 		0FF7449423A2B8B20025EB98 /* LaunchScreen.storyboard */ = {
@@ -300,7 +312,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiplataform.Chat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiplataform.chat.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hiplataform.Chat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiplataform.chat.swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
